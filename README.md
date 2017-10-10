@@ -1,7 +1,7 @@
-# Documents for good code
+# Documents for good programing
 
 # 目的
-良いコードのための原則・パターン・プラクティス練習ガイド
+良いプログラミングのための原則・パターン・プラクティス練習ガイド
 
 # 概要
 ## 前提
