@@ -1,14 +1,10 @@
----
-markdown:
-  image_dir: /draft/images
-  path: draft.md
-  ignore_from_front_matter: true
-  absolute_image_path: false
----
-
+  
+  
 # 良いコードのための原則・パターン・プラクティス練習ガイド
-
+  
+  
 ## 目次
+  
 + 良いコード
 + 原則
 + パターン
@@ -16,10 +12,13 @@ markdown:
 + プログラミングパラダイム
 + プログラミングアプローチ
 + 練習
-
+  
 ## 良いコード
+  
 ## 原則
+  
 ### 基本定理
+  
 1. スモール・イズ・ビューティフル
 1. 一つのプログラムには一つのことをうまくやらせる
 1. できるだけ早く試作する
@@ -29,32 +28,38 @@ markdown:
 1. シェルスクリプトを使うことで梃子の効果と移植性を高める
 1. 過度の対話的インタフェースを避ける
 1. すべてのプログラムをフィルタにする
-
+  
 ### 設計原則
+  
 + 単一責任の原則(SRP)
 + オープン・クローズドの原則(OCP)
 + リスコフの置換原則(LSP)
 + 依存関係逆転の原則(DIP)
 + インタフェース分離の原則(ISP)
-
+  
 ### プログラミング原則
+  
 + KISS (Keep It Simple, Stupid. or Keep It Short and Simple)
 + DRY (Don't Repeat Yourself.)
 + YAGNI (You Aren't Going to Need It.)
 + PIE (Program Intently and Expressively.)
 + SLAP(Single Level of Abstraction Principle.)
 + 名前重要 (Naming is important.)
-
+  
 ## パターン
+  
 ### デザインパターン
+  
 #### 生成に関するパターン
+  
 + Abstract Factory	関連する一連のインスタンスを状況に応じて、適切に生成する方法を提供する。
 + Builder	複合化されたインスタンスの生成過程を隠蔽する。
 + Factory Method	実際に生成されるインスタンスに依存しない、インスタンスの生成方法を提供する。
 + Prototype	同様のインスタンスを生成するために、原型のインスタンスを複製する。
 + Singleton あるクラスについて、インスタンスが単一であることを保証する。
-
+  
 #### 構造に関するパターン
+  
 + Adapter	元々関連性のない2つのクラスを接続するクラスを作る。
 + Bridge	クラスなどの実装と、呼出し側の間の橋渡しをするクラスを用意し、実装を隠蔽する。
 + Composite	再帰的な構造を表現する。
@@ -62,8 +67,9 @@ markdown:
 + Facade	複数のサブシステムの窓口となる共通のインタフェースを提供する。
 + Flyweight	多数のインスタンスを共有し、インスタンスの構築のための負荷を減らす。
 + Proxy	共通のインタフェースを持つインスタンスを内包し、利用者からのアクセスを代理する。Wrapperとも呼ばれる
-
+  
 #### 振る舞いに関するパターン
+  
 + Chain of Responsibility	イベントの送受信を行う複数のオブジェクトを鎖状につなぎ、それらの間をイベントが渡されてゆくようにする。
 + Command	複数の異なる操作について、それぞれに対応するオブジェクトを用意し、オブジェクトを切り替えることで、操作の切替えを実現する。
 + Interpreter	構文解析のために、文法規則を反映するクラス構造を作る。
@@ -75,17 +81,21 @@ markdown:
 + Strategy	データ構造に対して適用する一連のアルゴリズムをカプセル化し、アルゴリズムの切替えを容易にする。
 + Template Method	あるアルゴリズムの途中経過で必要な処理を抽象メソッドに委ね、その実装を変えることで処理が変えられるようにする。
 + Visitor	データ構造を保持するクラスと、それに対して処理を行うクラスを分離する。
-
+  
 ## プラクティス
+  
 ### TDD
+  
 #### F.I.R.S.T
+  
 1. Fast(高速)
 1. Independdant(独立)
 1. Repeatable(再現性)
 1. Self-Validating(自己検証可能)
 1. Timely(適時性)
-
+  
 #### 設計の悪臭
+  
 1. 硬さ
 1. もろさ
 1. 移植性のなさ
@@ -93,8 +103,9 @@ markdown:
 1. 不必要な複雑さ
 1. 不必要な繰り返し
 1. 不透明さ
-
+  
 ### リファクタリング
+  
 + コードの不吉な臭い
 + メソッドの構成
 + オブジェクト間での特性の移動
@@ -103,28 +114,35 @@ markdown:
 + メソッド呼び出しの単純化
 + 継承の取り扱い
 #### リファクタリングの定義
+  
 #### リファクタリングを行う理由
+  
 + リファクタリングはソフトウェア設計を改善する
 + リファクタリングはソフトウェアを理解しやすくする
 + リファクタリングはバグを見つけ出す
 + リファクタリングでより速くプログラミングできる
 #### いつリファクタリングをすべきか
+  
 + ３度目の法則
 + 機能追加時にリファクタリングを行う
 + バグフィックスの時にリファクタリングを行う
 + コードレビューの時にリファクタリングを行う
-
+  
 ### 継続的インテグレーション
-
+  
+  
 ## プログラミングアプローチ
+  
 ## プログラミングパラダイム
+  
 ## 練習
+  
 |     |POA  |DOA  |OOA  |
 |:---:|:---:|:---:|:---:|
 |STP  | 1   | 2   | -   |
 |OOP  | -   | 3   | 4   |
 |FCP  | -   | -   | 5   |
-
+  
 |     |STP  |OOP  |FCP  |
 |:---:|:---:|:---:|:---:|
 |SRP  | 1   | 2   | -   |
@@ -132,7 +150,7 @@ markdown:
 |RSP  | -   | 4   | -   |
 |ISP  | -   | 4   | -   |
 |DSP  | -   | 4   | -   |
-
+  
 |     |SRP  |OCP  |RSP  |ISP  |DSP  |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |TmpP | 3   | 3   | 3   | -   | -   |
@@ -140,107 +158,84 @@ markdown:
 |FsP  | -   | -   | -   | 4   | -   |
 |FctP | -   | -   | -   | -   | 4   |
 |AfctP| -   | -   | -   | -   | 4   |
-
+  
 ### Lesson1:POAによるSTPの実装
+  
 #### 目的
+  
 + 原則
 + パターン
 + プラクティス
   + コードの整理の基本は名前と段落
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
-class Main
-@enduml
-```
+  
+
+![](assets/cbd044328bb9a79bf9e150fc9181f6660.png?0.5633375897569155)  
 ### Lesson2:DOAによるSTPの実装
+  
 #### 目的
+  
 + 原則
   + 単一責任の原則（SRP）
 + パターン
 + プラクティス
   + 短いメソッド、小さなクラスを使ったコード整理
-
+  
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-class Geometory
-class Rectangle
-class Square
-class Circle
-
-Main -> Geometory
-Geometory --> Rectangle
-Geometory --> Square
-Geometory --> Circle
-
-@enduml
-```
+![](assets/cbd044328bb9a79bf9e150fc9181f6661.png?0.929867065028573)  
 ### Lesson3:DOAによるOOPの実装
+  
 #### 目的
+  
 + 原則
   + オープン・クローズドの原則(OCP)
 + パターン
   + Template Method
 + プラクティス
-
+  
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-class Geometory
-class Rectangle
-class Square
-class Circle
-
-Main -> Geometory
-Geometory <|-- Rectangle
-Geometory <|-- Square
-Geometory <|-- Circle
-
-@enduml
-```
-
+![](assets/cbd044328bb9a79bf9e150fc9181f6662.png?0.9675961365882069)  
+  
 ### Lesson4-1:OOAによるOOPの実装
+  
 #### 目的
+  
 + 原則
   + リスコフの置換原則(LSP)
 + パターン
   + Strategy
 + プラクティス
   + 多態を使うと区分ごとのロジックをif文/swith文を使わずに記述できる
-
+  
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-abstract Shape
-class Rectangle
-class Square
-class Circle
-
-Main -> Shape
-Shape <|-- Rectangle
-Shape <|-- Square
-Shape <|-- Circle
-
-@enduml
-```
-
+![](assets/cbd044328bb9a79bf9e150fc9181f6663.png?0.33521689870318827)  
+  
 ### Lesson4-2:OOAによるOOPの実装
+  
 #### 目的
+  
 + 原則
   + 単一責任の原則(SRP)
   + オープン・クローズドの原則(OCP)
@@ -248,111 +243,51 @@ Shape <|-- Circle
 + プラクティス
   + 値オブジェクトでわかりやすく安全にする
   + コレクションオブジェクトで、複雑なロジックを集約して整理する
-
+  
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-abstract Shape
-class Rectangle
-class Square
-class Circle
-class ShapeCollections
-class Unit
-
-Main -> Shape
-Shape *- ShapeCollections
-Shape *- Unit
-Shape <|-- Rectangle
-Shape <|-- Square
-Shape <|-- Circle
-
-@enduml
-```
-
+![](assets/cbd044328bb9a79bf9e150fc9181f6664.png?0.9501964030879879)  
+  
 ### Lesson4-3:OOAによるOOPの実装
+  
 #### 目的
+  
 + 原則
   + 依存関係逆転の原則(DIP)
   + インタフェース分離の原則(ISP)
 + パターン
   + Facade
-  + Factory
+  + Factory 
 + プラクティス
-
+  
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-class Shape
-class Rectangle
-class Square
-class Circle
-class ShapeCollections
-class Unit
-interface ShapeFactory
-class RectangleFactory
-class SquareFactory
-class CircleFactory
-interface RectangleGeometroyService
-interface SquareGeometroyService
-interface CircleGeometroyService
-class GeometroyService
-
-Shape *- ShapeCollections
-Shape *- Unit
-Shape <|-- Rectangle
-Shape <|-- Square
-Shape <|-- Circle
-ShapeFactory <|-- RectangleFactory
-ShapeFactory <|-- SquareFactory
-ShapeFactory <|-- CircleFactory
-
-RectangleFactory -> Rectangle
-SquareFactory -> Square
-CircleFactory -> Circle
-
-Main -> RectangleGeometroyService
-Main -> SquareGeometroyService
-Main -> CircleGeometroyService
-
-RectangleGeometroyService <|-- GeometroyService
-SquareGeometroyService <|-- GeometroyService
-CircleGeometroyService <|-- GeometroyService
-
-GeometroyService --> ShapeFactory
-
-@enduml
-```
-
-
+![](assets/cbd044328bb9a79bf9e150fc9181f6665.png?0.13889056814361833)  
+  
+  
 ### Lesson5:OOAによるFCPの実装
+  
 #### 目的
+  
 + 原則
 + パターン
 + プラクティス
 #### 基本仕様
+  
 #### ユースケース
+  
 #### コアモデル
-```puml
-@startuml
+  
 
-class Main
-class Shape
-class Rectangle
-class Square
-class Circle
-
-Main -> Shape
-Shape <|-- Rectangle
-Shape <|-- Square
-Shape <|-- Circle
-
-@enduml
-```
+![](assets/cbd044328bb9a79bf9e150fc9181f6666.png?0.48619882241495804)  
+  
