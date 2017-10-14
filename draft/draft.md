@@ -1,23 +1,113 @@
   
+# 良いコードのための原則・パターン・プラクティス練習ガイドドラフト
   
-# 良いコードのための原則・パターン・プラクティス練習ガイド
   
+* [良いコードのための原則・パターン・プラクティス練習ガイドドラフト](#良いコードのための原則パターンプラクティス練習ガイドドラフト )
+	* [動機](#動機 )
+	* [構成](#構成 )
+	* [良いコード](#良いコード )
+	* [原則](#原則 )
+		* [基本定理](#基本定理unixp )
+		* [設計原則](#設計原則ppp02 )
+		* [プログラミング原則](#プログラミング原則 )
+	* [パターン](#パターン )
+		* [デザインパターン](#デザインパターンgof )
+			* [生成に関するパターン](#生成に関するパターン )
+			* [構造に関するパターン](#構造に関するパターン )
+			* [振る舞いに関するパターン](#振る舞いに関するパターン )
+		* [エンタープライズアプリケーションアーキテクチャパターン](#エンタープライズアプリケーションアーキテクチャパターンpoeaa )
+			* [ベースパターン](#ベースパターン )
+	* [プラクティス](#プラクティス )
+		* [XP](#xp )
+		* [TDD](#tdd )
+			* [F.I.R.S.T](#first )
+			* [設計の悪臭](#設計の悪臭 )
+		* [リファクタリング](#リファクタリングrefactoring )
+			* [リファクタリングの定義](#リファクタリングの定義 )
+			* [リファクタリングを行う理由](#リファクタリングを行う理由 )
+			* [いつリファクタリングをすべきか](#いつリファクタリングをすべきか )
+		* [においと経験則](#においと経験則cc )
+		* [継続的インテグレーション](#継続的インテグレーション )
+	* [プログラミング](#プログラミング )
+		* [プログラミングパラダイム](#プログラミングパラダイム )
+		* [SP(Structured Programming)](#spstructured-programming )
+		* [OOP(Object-Oriented Programming)](#oopobject-oriented-programming )
+		* [FP(Fcuntional Programming)](#fpfcuntional-programming )
+	* [プログラミングアプローチ](#プログラミングアプローチ )
+		* [POA(ProcessOrientedApproach)](#poaprocessorientedapproach )
+		* [DOA(DataOrientedApproach)](#doadataorientedapproach )
+		* [OOA(ObjectOrientedApproach)](#ooaobjectorientedapproach )
+		* [SOA(ServiceOrientedApproach)](#soaserviceorientedapproach )
+	* [練習](#練習ccd )
+		* [練習の背景](#練習の背景 )
+		* [コーディング道場](#コーディング道場 )
+		* [型](#型 )
+		* [技](#技 )
+		* [乱取り](#乱取り )
+		* [良いコードのための練習プログラム集](#良いコードのための練習プログラム集 )
+			* [Lesson0:準備運動](#lesson0準備運動 )
+				* [目的](#目的 )
+				* [基本仕様](#基本仕様 )
+				* [ユースケース](#ユースケース )
+				* [コアモデル](#コアモデル )
+			* [Lesson1:POAによるSPの実装](#lesson1poaによるspの実装 )
+				* [目的](#目的-1 )
+				* [基本仕様](#基本仕様-1 )
+				* [ユースケース](#ユースケース-1 )
+				* [コアモデル](#コアモデル-1 )
+			* [Lesson2:DOAによるSPの実装](#lesson2doaによるspの実装 )
+				* [目的](#目的-2 )
+				* [基本仕様](#基本仕様-2 )
+				* [ユースケース](#ユースケース-2 )
+				* [コアモデル](#コアモデル-2 )
+			* [Lesson3:DOAによるOOPの実装](#lesson3doaによるoopの実装 )
+				* [目的](#目的-3 )
+				* [基本仕様](#基本仕様-3 )
+				* [ユースケース](#ユースケース-3 )
+				* [コアモデル](#コアモデル-3 )
+			* [Lesson4-1:OOAによるOOPの実装](#lesson4-1ooaによるoopの実装 )
+				* [目的](#目的-4 )
+				* [基本仕様](#基本仕様-4 )
+				* [ユースケース](#ユースケース-4 )
+				* [コアモデル](#コアモデル-4 )
+			* [Lesson4-2:OOAによるOOPの実装](#lesson4-2ooaによるoopの実装 )
+				* [目的](#目的-5 )
+				* [基本仕様](#基本仕様-5 )
+				* [ユースケース](#ユースケース-5 )
+				* [コアモデル](#コアモデル-5 )
+			* [Lesson4-3:OOAによるOOPの実装](#lesson4-3ooaによるoopの実装 )
+				* [目的](#目的-6 )
+				* [基本仕様](#基本仕様-6 )
+				* [ユースケース](#ユースケース-6 )
+				* [コアモデル](#コアモデル-6 )
+			* [Lesson5:OOAによるFPの実装](#lesson5ooaによるfpの実装 )
+				* [目的](#目的-7 )
+				* [基本仕様](#基本仕様-7 )
+				* [ユースケース](#ユースケース-7 )
+				* [コアモデル](#コアモデル-7 )
   
-## 目次
+## 動機
+  
+なぜ書くのか？
++ 原理・原則
++ 上達方法
++ プログラミングに必要な技術
+  + コード
+  + ドキュメント
+  + インフラ
+## 構成
   
 + 良いコード
 + 原則
 + パターン
 + プラクティス
-+ プログラミングパラダイム
-+ プログラミングアプローチ
++ プログラミング
 + 練習
-  
 ## 良いコード
   
 ## 原則
   
-### 基本定理
+### 基本定理[^UNIXP]
   
 1. スモール・イズ・ビューティフル
 1. 一つのプログラムには一つのことをうまくやらせる
@@ -29,7 +119,7 @@
 1. 過度の対話的インタフェースを避ける
 1. すべてのプログラムをフィルタにする
   
-### 設計原則
+### 設計原則[^PPP02]
   
 + 単一責任の原則(SRP)
 + オープン・クローズドの原則(OCP)
@@ -48,7 +138,7 @@
   
 ## パターン
   
-### デザインパターン
+### デザインパターン[^GOF]
   
 #### 生成に関するパターン
   
@@ -82,14 +172,49 @@
 + Template Method	あるアルゴリズムの途中経過で必要な処理を抽象メソッドに委ね、その実装を変えることで処理が変えられるようにする。
 + Visitor	データ構造を保持するクラスと、それに対して処理を行うクラスを分離する。
   
+### エンタープライズアプリケーションアーキテクチャパターン[^PoEAA]
+  
+#### ベースパターン
+  
++ ゲートウェイ
++ マッパー
++ レイヤースーパータイプ
++ セパレートインタフェース
++ レジストリ
++ バリューオブジェクト
++ マネー
++ スペシャルケース
++ プラグイン
++ サービススタブ
++ レコードセット
+  
 ## プラクティス
+  
+### XP
+  
++ チームメンバーとしての顧客
++ ユーザーストーリー
++ 短期間のリリースサイクル
+  + イテレーションプラン
+  + リリースプライン
++ 受け入れテスト
++ ペアプログラミング
++ テストファースト開発
++ 共同所有権
++ 継続的なインテグレーション（統合）
++ 持続可能なペース
++ オープンワークスペース
++ 計画ゲーム
++ シンプルな設計
++ リファクタリング
++ メタファー
   
 ### TDD
   
 #### F.I.R.S.T
   
 1. Fast(高速)
-1. Independdant(独立)
+1. Independent(独立)
 1. Repeatable(再現性)
 1. Self-Validating(自己検証可能)
 1. Timely(適時性)
@@ -104,7 +229,7 @@
 1. 不必要な繰り返し
 1. 不透明さ
   
-### リファクタリング
+### リファクタリング[^Refactoring]
   
 + コードの不吉な臭い
 + メソッドの構成
@@ -128,22 +253,189 @@
 + バグフィックスの時にリファクタリングを行う
 + コードレビューの時にリファクタリングを行う
   
+### においと経験則[^CC]
+  
++ コメント
+  + C1:不適切な情報
+  + C2:退化コメント
+  + C3:冗長なコメント
+  + C4:記述不足のコメント
+  + C5:コメントアウトされたコード  
++ 環境
+  + E1:ビルドに複数のステップを要する
+  + E2:テストに複数のステップを要する  
++ 関数
+  + F1:多すぎる引数
+  + F2:出力引数
+  + F3:フラグ引数
+  + F4:死んだ関数    
++ 一般
+  + G1:１つのソースファイルに複数の言語を使用する
+  + G2:あって当然の振る舞いが実装されていない
+  + G3:境界値に対する不正確な振る舞い
+  + G4:安全軽視
+  + G5:重複
+  + G6:抽象レベルが正しくないコード
+  + G7:継承クラスに依存したベースクラス
+  + G8:情報過多
+  + G9:デッドコード
+  + G10:垂直分離
+  + G11:不整合
+  + G12:雑然
+  + G13:人為的な結合
+  + G14:機能の羨望
+  + G15:セレクタ引数
+  + G16:不明瞭な意図
+  + G17:責務を持たせる場所の間違い
+  + G18:不適切なstatic
+  + G19:説明的変数
+  + G20:関数名は体を表すべき
+  + G21:アルゴリズムを理解する
+  + G22:論理的な依存性を物理的なものとする
+  + G23:if/elseやswitch/caseよりも多態を好む
+  + G24:標準や規約に従う
+  + G25:マジックナンバーを名前付けした定数に置き換える
+  + G26:正確であれ
+  + G27:規約より構造
+  + G28:条件をカプセル化せよ
+  + G29:条件の非定刑を避ける
+  + G30:関数では１つのことを行うべき
+  + G31:隠れた時間軸上の結合
+  + G32:いいかげんにならないこと
+  + G33:境界条件はカプセル化する
+  + G34:関数は１つの抽象レベルを担うべき
+  + G35:設定可能なデータは高いレベルに置く
+  + G36:推移的なナビゲーションを避ける  
++ Java
+  + J1:ワイルドカードを使って、長いimportのリストを避ける
+  + J2:定数を継承しない
+  + J3:定数とenum
++ 名前
+  + N1:記述的な名前を選ぶ
+  + N2:抽象レベルに適切な名前を選ぶ
+  + N3:可能な限り標準の用語を使用する
+  + N4:はっきりした名前
+  + N5:広いスコープには長い名前を
+  + N6:エンコーディングを避ける
+  + N7:名前で副作用を示すべき
++ テスト
+  + T1:不十分なテスト
+  + T2:カバレッジツールを脂油する!
+  + T3:ささいなテストを省略しない
+  + T4:無視すること指定されたテストは、あいまいさへの問いかけである
+  + T5:境界条件テスト
+  + T6:バグの周辺は徹底的にテストを
+  + T7:失敗パターンは何かを語る
+  + T8:テストカバレッジのパターンは何かを語る
+  + T9:テストは高速に実行できるべき
+  
 ### 継続的インテグレーション
   
   
-## プログラミングアプローチ
+## プログラミング
   
-## プログラミングパラダイム
+プログラミングとは問題解決行動
   
-## 練習
+### プログラミングパラダイム
+  
+### SP(Structured Programming)
+  
+  
+>The first paradigm to be adopted(but not the first to be invented) was structured programming, which was discovered by Edsger Wybe Dijkstra in 1968. Dijkstra showed that the use of unrestrained jumps(goto statements) is harmful to program structure. As we'll see in the chapters that follow, he replaced those jumps with the more familiar if/then/eles and do/while/until constructs.
+  
+>We can summarize the structured programming paradigm as follows:
+  
+>Structured programming imposes discipline on direct transfer of control.
+[^CA]
+  
+### OOP(Object-Oriented Programming)
+  
+>The second paradigm to be adopted was actually discovered two years earlier, in 1966, by Ole Johan Dahl and Kristen Nygaard. These two programmers noticed that the function call stack frame in the ALGOL language could be moved to a heap, thereby allowing local variables declared by a function to exist long after the function returned. The function become a constructor for a class, the local variables become instance variables, and the nested functions become methods. This led inevitably to the discovery of polymorphism through the disciplined use of function pointers.
+  
+>We can summarize the object-oriented programming paradigm as follows:
+  
+>Object-oriented programming imposes discipline on indirect transfer of control.
+[^CA]
+  
+### FP(Fcuntional Programming)
+  
+>The third paradigm, which has only recently begun to be adopted, was the first to be invented. Indeed, its invention predates computer programming itself. Functional programming is the direct result of the work of Alonzo Church, who in 1936 invented λ-calculus while pursuing the same mathematical problem that was motivating Alan Turing at the same time. His λ-calculus is the foundation of the LISP language, invented in 1958 by John McCarthy. A foundational notion of λ-calculus is immutability---that is, the notion that the values of symbols do not change. This effectively means that is, the notion that that the values of symbols do not change. This effectively means that a functional language has no assignment statement. Most functional languages do, in fact, have some means to alter the value of a variable, but only under very strict discipline.
+  
+>We can summarize the functional programming paradigm as follows:
+  
+>Functional programming imposes discipline upon assignment.
+[^CA]
+  
+## プログラミングアプローチ
+  
+### POA(ProcessOrientedApproach)
+  
+「業務処理プロセス」に着目するアプローチ手法。
+POAは、業務内容を中心に設計されるためシステム設計が業務内容に強く依存する。そのため、業務内容が変更になったときにはシステムの大幅な変更が必要となりコスト面の負担が大きくなる。また、各部署の業務内容に応じて独立したシステムになることが多く、他のシステムとのデータ連携が複雑になるという問題がある。
+  
+### DOA(DataOrientedApproach)
+  
+「どんなデータを必要とするか」に着目するアプローチ手法。
+DOAでは、データを業務プロセスとは切り離して先にERモデルを用いて分析・設計する。業務のモデル化を行う際にデータが最も安定した情報資源であり、かつ共通資源であることを利用するため、業務変更によるシステムへの影響度が少なくなる。また、事象応答分析も行い、外部からの事象とその応答のタイミング的、時間的な関係を抽出し、制御の流れも図式化して分析する。
+  
+### OOA(ObjectOrientedApproach)
+  
+「データとそれを操作する手続き（メソッド）の両方、すなわちオブジェクト」に着目するアプローチ手法。
+DOAの概念をさらに進めたアプローチ。オブジェクトとは、データ（属性）とそのデータに対する手続き（メソッド）を１つにまとめたものを指す。
+  
+### SOA(ServiceOrientedApproach)
+  
+個々のシステムをサービスという概念で捉えてシステムを構築する「やり方」（共通のメッセージ交換インタフェースに対応）。
+サービスとは、業務上の１つの処理に相当するソフトウェアの機能。SOAを実現するために必要となる技術基盤は、ほとんどの場合Webサービスとなる。
+  
+## 練習[^CCD]
+  
+武術もプログラミングも、スピードは練習の成果である。その練習はどちらもに似ている。問題と解決策からなる題目を選び、完全に習得するまで何度も実行するのだ。
+  
+### 練習の背景
+  
+  
+最初の練習用プログラム
+  
+```c
+main()
+{
+  printf("hello, world\n")
+}
+```
+  
+### コーディング道場
+  
+### 型
+  
+プログラミングの型というのは、プログラミングの問題を解くためにキーボードやマウスの動きの練習である。実際に問題を解くわけではない。解き方はすでにわかっている。問題を解きながら体の動きや意思決定の練習をするのである。
+ここでも完全に限りなく近づくことが目標となる。脳や指に動きや反応を覚えさせるために、何度も練習するのだ。練習するうちに、自分の動きや解決策が少しづつ改善・効率化されることに気づくだろう。
+型を使った練習は、ホットキーや操作のイデオムの学習に適している。TDDやCI（継続的インテグレーション）などの規律の学習にも優れた方法である。そして、最も重要なのは、よくある問題と解決策の組み合わせを潜在意識に植えつけることで、現実のプログラミングの問題解決方法がわかるようになるということだ。
+武術家のようにプログラマは複数の型を知り、定期的に練習することで、記憶に残るようになる。型の多くは、http://katas.softwarecraftsmanship.org にある。
+  
+  + [ボウリングゲーム](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata )
+  + [素因数分解](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata )
+  + [ワードラップ](http://thecleancoder.blogspot.jp/2010/10/craftsman-62-dark-path.html )
+  
+### 技
+  
+プログラマもこれと同じ練習ができる。[ピンポンゲーム](http://c2.com/cgi/wiki?PairProgrammingPingPongPattern )を使うのだ。まず、２人で型または簡単な問題を選ぶ。次に、１人がユニットテストを書き、もう１人がテストを成功させる。そして、役割を交代する。
+  
+### 乱取り
+  
+２人組でパートナーが問題を解く「技」とよく似ているが、こちらは参加人数が多く、ルールも少し変更されている。まず、プロジェクタに画面を写す。次に、１人がテストを書く。そして、次の人がテストを成功させて、次のテストを書く。これを順番にやっていくのだ。
+ここから学べることはすごく多い。他の人が問題を解く様子がよくわかるからだ。それによって、自分のやり方を改善し、スキルを向上させられる。
+  
+### 良いコードのための練習プログラム集
+  
   
 |     |POA  |DOA  |OOA  |
 |:---:|:---:|:---:|:---:|
-|STP  | 1   | 2   | -   |
+|SP   | 1   | 2   | -   |
 |OOP  | -   | 3   | 4   |
-|FCP  | -   | -   | 5   |
+|FP   | -   | -   | 5   |
   
-|     |STP  |OOP  |FCP  |
+|     |SP   |OOP  |FP   |
 |:---:|:---:|:---:|:---:|
 |SRP  | 1   | 2   | -   |
 |OCP  | -   | 3   | -   |
@@ -151,33 +443,60 @@
 |ISP  | -   | 4   | -   |
 |DSP  | -   | 4   | -   |
   
-|     |SRP  |OCP  |RSP  |ISP  |DSP  |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|TmpP | 3   | 3   | 3   | -   | -   |
-|StgP | -   | 4   | 4   | -   | -   |
-|FsP  | -   | -   | -   | 4   | -   |
-|FctP | -   | -   | -   | -   | 4   |
-|AfctP| -   | -   | -   | -   | 4   |
+|                |SRP  |OCP  |RSP  |ISP  |DSP  |
+|:---:           |:---:|:---:|:---:|:---:|:---:|
+|Template Method | 3   | 3   | 3   | -   | -   |
+|Strategy        | -   | 4   | 4   | -   | -   |
+|Facade          | -   | -   | -   | 4   | -   |
+|Factory Method  | -   | -   | -   | -   | 4   |
+|Abstract Factory| -   | -   | -   | -   | 4   |
   
-### Lesson1:POAによるSTPの実装
+#### Lesson0:準備運動
   
-#### 目的
+##### 目的
+  
++ 原則
++ パターン
++ プラクティス
+  + TDD
+  + リファクタリング
+  + CI
+##### 基本仕様
+  
++ ３で割り切れる場合は「Fizz」を出力する。
++ ５で割り切れる場合は「Buzz」を出力する。
++ 両者で割り切れる場合は「FizzBuzz」を出力する。
+  
+##### ユースケース
+  
+
+![](images/e33269928158327ef645af4b6453b2080.png?0.9403423278403069)  
+##### コアモデル
+  
+
+![](images/e33269928158327ef645af4b6453b2081.png?0.5313337910704539)  
+  
+#### Lesson1:POAによるSPの実装
+  
+##### 目的
   
 + 原則
 + パターン
 + プラクティス
   + コードの整理の基本は名前と段落
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6660.png?0.5633375897569155)  
-### Lesson2:DOAによるSTPの実装
+![](images/e33269928158327ef645af4b6453b2082.png?0.479664030044737)  
+##### コアモデル
   
-#### 目的
+
+![](images/e33269928158327ef645af4b6453b2083.png?0.658025716329985)  
+#### Lesson2:DOAによるSPの実装
+  
+##### 目的
   
 + 原則
   + 単一責任の原則（SRP）
@@ -185,17 +504,19 @@
 + プラクティス
   + 短いメソッド、小さなクラスを使ったコード整理
   
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6661.png?0.929867065028573)  
-### Lesson3:DOAによるOOPの実装
+![](images/e33269928158327ef645af4b6453b2084.png?0.8463490371461406)  
+##### コアモデル
   
-#### 目的
+
+![](images/e33269928158327ef645af4b6453b2085.png?0.3049688061377469)  
+#### Lesson3:DOAによるOOPの実装
+  
+##### 目的
   
 + 原則
   + オープン・クローズドの原則(OCP)
@@ -203,18 +524,20 @@
   + Template Method
 + プラクティス
   
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6662.png?0.9675961365882069)  
+![](images/e33269928158327ef645af4b6453b2086.png?0.24914928772500744)  
+##### コアモデル
   
-### Lesson4-1:OOAによるOOPの実装
+
+![](images/e33269928158327ef645af4b6453b2087.png?0.6306132289012827)  
   
-#### 目的
+#### Lesson4-1:OOAによるOOPの実装
+  
+##### 目的
   
 + 原則
   + リスコフの置換原則(LSP)
@@ -223,71 +546,107 @@
 + プラクティス
   + 多態を使うと区分ごとのロジックをif文/swith文を使わずに記述できる
   
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6663.png?0.33521689870318827)  
+![](images/e33269928158327ef645af4b6453b2088.png?0.28100917732389497)  
+##### コアモデル
   
-### Lesson4-2:OOAによるOOPの実装
+
+![](images/e33269928158327ef645af4b6453b2089.png?0.09778792061199226)  
   
-#### 目的
+#### Lesson4-2:OOAによるOOPの実装
+  
+##### 目的
   
 + 原則
   + 単一責任の原則(SRP)
   + オープン・クローズドの原則(OCP)
 + パターン
+  + バリューオブジェクト
 + プラクティス
-  + 値オブジェクトでわかりやすく安全にする
   + コレクションオブジェクトで、複雑なロジックを集約して整理する
   
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6664.png?0.9501964030879879)  
+![](images/e33269928158327ef645af4b6453b20810.png?0.694981660584788)  
+##### コアモデル
   
-### Lesson4-3:OOAによるOOPの実装
+
+![](images/e33269928158327ef645af4b6453b20811.png?0.868865656269648)  
   
-#### 目的
+#### Lesson4-3:OOAによるOOPの実装
+  
+##### 目的
   
 + 原則
   + 依存関係逆転の原則(DIP)
   + インタフェース分離の原則(ISP)
 + パターン
   + Facade
-  + Factory 
+  + Factory  
+  + レイヤースーパータイプ
+  + セパレートインタフェース
+  + スペシャルケース  
+  + サービスタブ
 + プラクティス
   
-#### 基本仕様
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6665.png?0.13889056814361833)  
+![](images/e33269928158327ef645af4b6453b20812.png?0.6412026583999006)  
+##### コアモデル
+  
+
+![](images/e33269928158327ef645af4b6453b20813.png?0.37001255199082084)  
   
   
-### Lesson5:OOAによるFCPの実装
+#### Lesson5:OOAによるFPの実装
   
-#### 目的
+##### 目的
   
 + 原則
 + パターン
+  + Iterator
 + プラクティス
-#### 基本仕様
+  + ブロック
+  + 繰り返しの処理:each
+  + 特定の条件を満たす要素だけを配列に入れて返す:select
+  + 特定の条件を満たさない要素だけを配列に入れt返す:reject
+  + 新しい要素の配列を返す:collect
+  + 配列の中から、条件に一致する要素を取得する:find
+  + 指定した評価式で並び替えた配列を返す:sort
+  + 配列の中から、条件に一致する要素を取得する:grep
+  + ブロック内の条件式が真である間までの要素を返す:take_while
+  + ブロック内の条件式が真である以降の要素を返す;drop_while
+  + reduce関数でプログラムを変更する
+  + 関数を受ける関数の作成
+  + クロージャー
+  + ファーストクラスオブジェクト
+  + 関数合成
+##### 基本仕様
   
-#### ユースケース
-  
-#### コアモデル
+##### ユースケース
   
 
-![](assets/cbd044328bb9a79bf9e150fc9181f6666.png?0.48619882241495804)  
+![](images/e33269928158327ef645af4b6453b20814.png?0.6577047818937787)  
+##### コアモデル
+  
+
+![](images/e33269928158327ef645af4b6453b20815.png?0.3987889177828454)  
+[^UNIXP]: UNIXという考え方 2001
+[^PPP02]: Agile Software Development: Principles, Patters, and Practices, 2002
+[^CC]: Clean Code 2090
+[^CA]: Clean Architecture 2018
+[^CCD]: Clean Coder
+[^PoEAA]: Patterns of Enterprise Application Architecture
+[^GOF]: Elements of Reusable Object Oriented Software 1996
+[^Refactoring]: リファクタリングープログラムの体質改善テクニック 1999
   
