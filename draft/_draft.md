@@ -11,9 +11,10 @@ markdown:
 ## 動機
 + なぜ書くのか？
   + 目的
+    + どうやったらプログラミングが上達するのか？  
   + 職業プログラマ
   + 原点回帰
-  + 古典に学ぶ
+  + 古典に学ぶ  
 + 原理・原則
 + 上達方法
   + 練習
@@ -408,20 +409,20 @@ main()
 |Factory Method  | -   | -   | -   | -   | 4   |
 |Abstract Factory| -   | -   | -   | -   | 4   |
 
-#### Lesson0:準備運動
-##### 目的
+### Lesson0:準備運動
+#### 目的
 + 原則
 + パターン
 + プラクティス
   + TDD
   + リファクタリング
   + CI
-##### 基本仕様
+#### 基本仕様
 + ３で割り切れる場合は「Fizz」を出力する。
 + ５で割り切れる場合は「Buzz」を出力する。
 + 両者で割り切れる場合は「FizzBuzz」を出力する。
 
-##### ユースケース
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -431,21 +432,21 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 class FizzBuzz
 @enduml
 ```
 
-#### Lesson1:POAによるSPの実装
-##### 目的
+### Lesson1:POAによるSPの実装
+#### 目的
 + 原則
 + パターン
 + プラクティス
   + コードの整理の基本は名前と段落
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -455,22 +456,22 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 class Main
 @enduml
 ```
-#### Lesson2:DOAによるSPの実装
-##### 目的
+### Lesson2:DOAによるSPの実装
+#### 目的
 + 原則
   + 単一責任の原則（SRP）
 + パターン
 + プラクティス
   + 短いメソッド、小さなクラスを使ったコード整理
 
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -480,7 +481,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
@@ -497,16 +498,16 @@ Geometory --> Circle
 
 @enduml
 ```
-#### Lesson3:DOAによるOOPの実装
-##### 目的
+### Lesson3:DOAによるOOPの実装
+#### 目的
 + 原則
   + オープン・クローズドの原則(OCP)
 + パターン
   + Template Method
 + プラクティス
 
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -516,7 +517,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
@@ -534,8 +535,8 @@ Geometory <|-- Circle
 @enduml
 ```
 
-#### Lesson4-1:OOAによるOOPの実装
-##### 目的
+### Lesson4-1:OOAによるOOPの実装
+#### 目的
 + 原則
   + リスコフの置換原則(LSP)
 + パターン
@@ -543,8 +544,8 @@ Geometory <|-- Circle
 + プラクティス
   + 多態を使うと区分ごとのロジックをif文/swith文を使わずに記述できる
 
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -554,7 +555,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
@@ -572,8 +573,8 @@ Shape <|-- Circle
 @enduml
 ```
 
-#### Lesson4-2:OOAによるOOPの実装
-##### 目的
+### Lesson4-2:OOAによるOOPの実装
+#### 目的
 + 原則
   + 単一責任の原則(SRP)
   + オープン・クローズドの原則(OCP)
@@ -582,8 +583,8 @@ Shape <|-- Circle
 + プラクティス
   + コレクションオブジェクトで、複雑なロジックを集約して整理する
 
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -593,7 +594,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
@@ -615,8 +616,8 @@ Shape <|-- Circle
 @enduml
 ```
 
-#### Lesson4-3:OOAによるOOPの実装
-##### 目的
+### Lesson4-3:OOAによるOOPの実装
+#### 目的
 + 原則
   + 依存関係逆転の原則(DIP)
   + インタフェース分離の原則(ISP)
@@ -629,8 +630,8 @@ Shape <|-- Circle
   + サービスタブ
 + プラクティス
 
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -640,7 +641,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
@@ -687,8 +688,8 @@ GeometroyService --> ShapeFactory
 ```
 
 
-#### Lesson5:OOAによるFPの実装
-##### 目的
+### Lesson5:OOAによるFPの実装
+#### 目的
 + 原則
 + パターン
   + Iterator
@@ -708,8 +709,8 @@ GeometroyService --> ShapeFactory
   + クロージャー
   + ファーストクラスオブジェクト
   + 関数合成
-##### 基本仕様
-##### ユースケース
+#### 基本仕様
+#### ユースケース
 ```puml
 @startuml
 actor User
@@ -719,7 +720,7 @@ rectangle Program {
 }
 @enduml
 ```
-##### コアモデル
+#### コアモデル
 ```puml
 @startuml
 
