@@ -183,9 +183,12 @@ DOAの概念をさらに進めたアプローチ。オブジェクトとは、�
 + パッケージ管理マネージャ
 ##### Ship
 + Jenkins
++ CircleCI
+
 ##### Run
-+ GitFlow
-+ GitHubFlow
++ [GitFlow](https://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
++ [GitHubFlow](http://tracpath.com/bootcamp/learning_git_github_flow.html)
++ [セマンティックバージョニング](http://semver.org/lang/ja/)
 
 #### 持続可能なペース
 #### オープンワークスペース
