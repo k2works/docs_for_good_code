@@ -98,6 +98,14 @@ DOAの概念をさらに進めたアプローチ。オブジェクトとは、�
 + 依存関係逆転の原則(DIP)
 + インタフェース分離の原則(ISP)
 
+### パッケージ設計の原則[^PPP02]
++ 再利用・リリース等価の原則(REP: Reuse-Release Equivalency)
++ 全再利用の原則(CRP: Common Reuse Principle)
++ 閉鎖性共通の原則(CCP: Common Closure Principle)
++ 非循環依存関係の原則(ADP: Acyclic Dependencies Principle)
++ 安定依存の原則(SDP: Stable Dependencies Principle)
++ 安定度・抽象度等価の原則(SAP: Stable Abstractions Principle)
+
 ### プログラミング原則
 + KISS (Keep It Simple, Stupid. or Keep It Short and Simple)
 + DRY (Don't Repeat Yourself.)
